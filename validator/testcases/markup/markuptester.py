@@ -451,7 +451,7 @@ class MarkupParser(HTMLParser):
             tag = "script"
 
         if tag == "script" and len(self.xml_buffer[-1]) > 1000:
-            self.err.warning(("markup"),
+            self.err.warning(("markup", "complex_script"),
                              "Markup parsing error",
                              "A long inline script node was found. "
                              "Please store complex scripts in .js files rather than inline script nodes.",
