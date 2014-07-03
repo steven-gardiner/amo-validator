@@ -385,6 +385,9 @@ def test_complex_script_detection():
     warning = err.warnings[0]
     eq_(warning["file"], "foo.xul")
     eq_(warning["id"], ("markup", "complex_script"))
+    
+    # one and only one warning
+    eq_(len(err.warnings), 1)
 
 
 def test_proper_line_numbers():
