@@ -371,9 +371,8 @@ def test_complex_script_detection():
     # referenced scripts are okay
     eq_(len(err.warnings), 0)
 
-    for num in xrange(1000):
-        blanks += """
-        """
+    blanks = """
+    """ * 1001;
 
     err = _test_xul_raw("""
     <doc><script>
